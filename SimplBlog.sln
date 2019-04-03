@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplBlog.Web", "src\SimplBlog.Web\SimplBlog.Web.csproj", "{5CE48237-6025-4ABC-89C7-4E50E676AD2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplBlog.Web", "src\SimplBlog.Web\SimplBlog.Web.csproj", "{5CE48237-6025-4ABC-89C7-4E50E676AD2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplBlog.Data", "src\SimplBlog.Data\SimplBlog.Data.csproj", "{854BE92C-1163-4966-8943-F58AA27FC257}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplBlog.Data", "src\SimplBlog.Data\SimplBlog.Data.csproj", "{854BE92C-1163-4966-8943-F58AA27FC257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplBlog.Core", "SimplBlog.Core\SimplBlog.Core.csproj", "{56FC4F6B-6E8B-4E3E-9673-B0369D200705}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{854BE92C-1163-4966-8943-F58AA27FC257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{854BE92C-1163-4966-8943-F58AA27FC257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{854BE92C-1163-4966-8943-F58AA27FC257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56FC4F6B-6E8B-4E3E-9673-B0369D200705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56FC4F6B-6E8B-4E3E-9673-B0369D200705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56FC4F6B-6E8B-4E3E-9673-B0369D200705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56FC4F6B-6E8B-4E3E-9673-B0369D200705}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

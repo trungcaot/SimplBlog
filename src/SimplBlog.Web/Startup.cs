@@ -10,6 +10,11 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using SimplBlog.Web.Services;
 using SimplBlog.Web.Services.Interfaces;
+using SimplBlog.Core;
+using SimplBlog.Data;
+using Microsoft.EntityFrameworkCore;
+using SimplBlog.Data.Domain;
+using Microsoft.AspNetCore.Identity;
 
 namespace SimplBlog.Web
 {
@@ -29,6 +34,28 @@ namespace SimplBlog.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            var section = Configuration.GetSection("SimplBlog");
+
+            var databaseProvider = section.GetValue<string>("DbProvider");
+            var connString = section.GetValue<string>("ConnString");
+
+            if (databaseProvider == "SqlServer")
+            {
+                SimplBlogSettings.DbOptions = options => options.UseSqlServer(connString);
+            }
+
+            services.AddDbContext<SimplBlogDbContext>(SimplBlogSettings.DbOptions, ServiceLifetime.Transient);
+            services.AddIdentity<AppUser, IdentityRole>(options => {
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 4;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.User.AllowedUserNameCharacters = null;
+            })
+            .AddEntityFrameworkStores<SimplBlogDbContext>()
+            .AddDefaultTokenProviders();
+
             services.AddMvc();
             services.AddSingleton(provider => Configuration);
             services.AddSingleton<IMessageService, ConfigurationMessageService>();

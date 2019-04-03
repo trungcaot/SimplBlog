@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\SimplBlog.Core\SimplBlog.Core.csproj" />
+    <ProjectReference Include="..\SimplBlog.Data\SimplBlog.Data.csproj" />
+  </ItemGroup>
+
 </Project>

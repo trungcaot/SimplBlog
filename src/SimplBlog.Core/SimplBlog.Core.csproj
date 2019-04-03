@@ -8,8 +8,4 @@
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SimplBlog.Core\SimplBlog.Core.csproj" />
-  </ItemGroup>
-
 </Project>

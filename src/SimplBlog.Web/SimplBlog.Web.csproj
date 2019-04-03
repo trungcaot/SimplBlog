@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SimplBlog.Core\SimplBlog.Core.csproj" />
+    <ProjectReference Include="..\SimplBlog.Core\SimplBlog.Core.csproj" />
     <ProjectReference Include="..\SimplBlog.Data\SimplBlog.Data.csproj" />
   </ItemGroup>
 

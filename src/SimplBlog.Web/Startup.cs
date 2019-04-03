@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System.IO;
-using SimplBlog.Web.Services;
-using SimplBlog.Web.Services.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using SimplBlog.Core;
 using SimplBlog.Data;
-using Microsoft.EntityFrameworkCore;
 using SimplBlog.Data.Domain;
-using Microsoft.AspNetCore.Identity;
+using SimplBlog.Web.Services;
+using SimplBlog.Web.Services.Interfaces;
+using System.IO;
 
 namespace SimplBlog.Web
 {

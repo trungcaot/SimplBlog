@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 using SimplBlog.Core;
 using SimplBlog.Data;
 using SimplBlog.Data.Domain;
@@ -24,6 +25,9 @@ namespace SimplBlog.Web
                                 .SetBasePath(Directory.GetCurrentDirectory())
                                 .AddJsonFile("appsettings.json");
             Configuration = builder.Build();
+            
+            // create the static Log.Logger by reading from the configuration.
+            Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(Configuration).CreateLogger();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -52,6 +56,8 @@ namespace SimplBlog.Web
             .AddEntityFrameworkStores<SimplBlogDbContext>()
             .AddDefaultTokenProviders();
 
+            services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
+
             services.AddMvc();
             services.AddSingleton(provider => Configuration);
             services.AddSingleton<IMessageService, ConfigurationMessageService>();
@@ -73,6 +79,8 @@ namespace SimplBlog.Web
                 // -- Get message from configuration file. -- //
                 //var message = Configuration["Message"];
                 //await context.Response.WriteAsync(message);
+
+                Log.Information("Welcome Serilog to SimplBlog!");
 
                 // -- Get message from service. -- //
                 await context.Response.WriteAsync(msg.GetMessage());

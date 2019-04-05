@@ -8,6 +8,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
     <PackageReference Include="Serilog" Version="2.8.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Serilog.Settings.Configuration" Version="3.0.1" />
@@ -21,8 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Controllers\" />
-    <Folder Include="Areas\Models\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\SBAdmin2\css\" />
     <Folder Include="wwwroot\SBAdmin2\js\" />
     <Folder Include="wwwroot\SBAdmin2\img\" />

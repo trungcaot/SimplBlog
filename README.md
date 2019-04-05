@@ -13,6 +13,8 @@ SimplBlog is simple blog supporting for mutiple authors.
 2. Run application in Visual Studio or using your code editor
 
 ## Themes
-1. SimplBlog decides to use SB Admin 2 theme for developing Admin page. 
 [SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/) is an open source admin dashboard theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+
+* SimplBlog is using this template for developing Admin page. 
+
 

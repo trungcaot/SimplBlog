@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplBlog.Web", "src\SimplB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplBlog.Data", "src\SimplBlog.Data\SimplBlog.Data.csproj", "{854BE92C-1163-4966-8943-F58AA27FC257}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplBlog.Core", "src\SimplBlog.Core\SimplBlog.Core.csproj", "{7B57DAA3-5AE4-411A-A169-B88597F44F69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplBlog.Core", "src\SimplBlog.Core\SimplBlog.Core.csproj", "{7B57DAA3-5AE4-411A-A169-B88597F44F69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

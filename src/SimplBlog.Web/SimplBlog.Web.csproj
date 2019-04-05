@@ -20,4 +20,13 @@
     <ProjectReference Include="..\SimplBlog.Data\SimplBlog.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Controllers\" />
+    <Folder Include="Areas\Models\" />
+    <Folder Include="wwwroot\SBAdmin2\css\" />
+    <Folder Include="wwwroot\SBAdmin2\js\" />
+    <Folder Include="wwwroot\SBAdmin2\img\" />
+    <Folder Include="wwwroot\SBAdmin2\vendor\" />
+  </ItemGroup>
+
 </Project>

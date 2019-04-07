@@ -23,6 +23,10 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\Resume\css\" />
+    <Folder Include="wwwroot\Resume\js\" />
+    <Folder Include="wwwroot\Resume\img\" />
+    <Folder Include="wwwroot\Resume\vendor\" />
     <Folder Include="wwwroot\SBAdmin2\css\" />
     <Folder Include="wwwroot\SBAdmin2\js\" />
     <Folder Include="wwwroot\SBAdmin2\img\" />

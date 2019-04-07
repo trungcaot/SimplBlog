@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace SimplBlog.Web.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "Hello, from the controller!";
+            return View();
         }
     }
 }

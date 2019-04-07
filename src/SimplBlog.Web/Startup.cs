@@ -77,18 +77,6 @@ namespace SimplBlog.Web
             {
                 routes.MapRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             });
-
-            app.Run(async (context) =>
-            {
-                // -- Get message from configuration file. -- //
-                //var message = Configuration["Message"];
-                //await context.Response.WriteAsync(message);
-
-                Log.Information("Welcome Serilog to SimplBlog!");
-
-                // -- Get message from service. -- //
-                await context.Response.WriteAsync(msg.GetMessage());
-            });
         }
     }
 }

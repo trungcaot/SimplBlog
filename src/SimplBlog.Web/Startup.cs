@@ -12,6 +12,8 @@ using SimplBlog.Data.Domain;
 using SimplBlog.Web.Services;
 using SimplBlog.Web.Services.Interfaces;
 using System.IO;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace SimplBlog.Web
 {
@@ -58,7 +60,11 @@ namespace SimplBlog.Web
 
             services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true));
 
-            services.AddMvc();
+            //services.AddTransient<IEmailSender, EmailSender>();
+
+            services.AddMvc()
+                    .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
             services.AddSingleton(provider => Configuration);
             services.AddSingleton<IMessageService, ConfigurationMessageService>();
         }
@@ -73,6 +79,7 @@ namespace SimplBlog.Web
             }
 
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");

@@ -3,6 +3,9 @@ using Microsoft.Extensions.Logging;
 
 namespace SimplBlog.Web.Areas.Admin.Controllers
 {
+    /// <summary>
+    /// Used for registering as a new user, logging in, and sending password reset emails.
+    /// </summary>
     [Area("Admin")]
     public class AccountController : Controller
     {
